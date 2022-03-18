@@ -10,6 +10,7 @@
 		93906DC727E4F91700D1EE32 /* SwiftKORE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93906DBE27E4F91700D1EE32 /* SwiftKORE.framework */; };
 		93906DCC27E4F91700D1EE32 /* SwiftKORETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906DCB27E4F91700D1EE32 /* SwiftKORETests.swift */; };
 		93906DCD27E4F91700D1EE32 /* SwiftKORE.h in Headers */ = {isa = PBXBuildFile; fileRef = 93906DC127E4F91700D1EE32 /* SwiftKORE.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93906DD727E4F92D00D1EE32 /* FirstFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906DD627E4F92D00D1EE32 /* FirstFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,8 @@
 		93906DC127E4F91700D1EE32 /* SwiftKORE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftKORE.h; sourceTree = "<group>"; };
 		93906DC627E4F91700D1EE32 /* SwiftKORETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftKORETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93906DCB27E4F91700D1EE32 /* SwiftKORETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKORETests.swift; sourceTree = "<group>"; };
+		93906DD627E4F92D00D1EE32 /* FirstFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstFile.swift; sourceTree = "<group>"; };
+		93906DD927E50C6000D1EE32 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +54,8 @@
 		93906DB427E4F91600D1EE32 = {
 			isa = PBXGroup;
 			children = (
-				93906DC027E4F91700D1EE32 /* SwiftKORE */,
+				93906DD827E4F9C400D1EE32 /* Deployment */,
+				93906DC027E4F91700D1EE32 /* Source */,
 				93906DCA27E4F91700D1EE32 /* SwiftKORETests */,
 				93906DBF27E4F91700D1EE32 /* Products */,
 			);
@@ -66,12 +70,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		93906DC027E4F91700D1EE32 /* SwiftKORE */ = {
+		93906DC027E4F91700D1EE32 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				93906DC127E4F91700D1EE32 /* SwiftKORE.h */,
+				93906DD627E4F92D00D1EE32 /* FirstFile.swift */,
 			);
-			path = SwiftKORE;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		93906DCA27E4F91700D1EE32 /* SwiftKORETests */ = {
@@ -80,6 +85,14 @@
 				93906DCB27E4F91700D1EE32 /* SwiftKORETests.swift */,
 			);
 			path = SwiftKORETests;
+			sourceTree = "<group>";
+		};
+		93906DD827E4F9C400D1EE32 /* Deployment */ = {
+			isa = PBXGroup;
+			children = (
+				93906DD927E50C6000D1EE32 /* Package.swift */,
+			);
+			path = Deployment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +157,7 @@
 				TargetAttributes = {
 					93906DBD27E4F91700D1EE32 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 					93906DC527E4F91700D1EE32 = {
 						CreatedOnToolsVersion = 13.3;
@@ -191,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93906DD727E4F92D00D1EE32 /* FirstFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -321,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -336,6 +351,7 @@
 		93906DD127E4F91700D1EE32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -356,6 +372,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +381,7 @@
 		93906DD227E4F91700D1EE32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -392,6 +410,7 @@
 		93906DD427E4F91700D1EE32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PG3WFJHK84;
@@ -408,6 +427,7 @@
 		93906DD527E4F91700D1EE32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PG3WFJHK84;
