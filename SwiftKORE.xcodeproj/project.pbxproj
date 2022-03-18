@@ -29,7 +29,7 @@
 		93906DC627E4F91700D1EE32 /* SwiftKORETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftKORETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93906DCB27E4F91700D1EE32 /* SwiftKORETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKORETests.swift; sourceTree = "<group>"; };
 		93906DD627E4F92D00D1EE32 /* FirstFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstFile.swift; sourceTree = "<group>"; };
-		93906DD927E50C6000D1EE32 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		93906E1027E5122700D1EE32 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 		93906DD827E4F9C400D1EE32 /* Deployment */ = {
 			isa = PBXGroup;
 			children = (
-				93906DD927E50C6000D1EE32 /* Package.swift */,
+				93906E1027E5122700D1EE32 /* Package.swift */,
 			);
 			path = Deployment;
 			sourceTree = "<group>";
