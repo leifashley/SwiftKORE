@@ -1,23 +1,24 @@
-// swift-tools-version:5.6
-//
-//  Package.swift
-//  SwiftKORE
-//
-//  Created by Leif Ashley on 3/18/22.
-//
+// swift-tools-version: 5.6
 
 import PackageDescription
 
-let package = Package(name: "SwiftKORE",
-                      platforms: [.iOS(.v14)],
-                      products: [.library(name: "SwiftKORE",
-                                          target: ["SwiftKORE"])],
-                      targets: [.target(name: "SwiftKORE",
-                                        path: "Source",
-                                        exclude: ["Info.plist"]),
-                                .testTarget(name: "SwiftKORETests",
-                                            dependencies: ["SwiftKORE"],
-                                            path: "Tests"
-                                           )],
-                      swiftLanguageVersions: [.v5]
+let package = Package(
+    name: "SwiftKORE",
+    products: [
+        .library(
+        name: "SwiftKORE",
+        targets: ["SwiftKORE"])
+    ],
+    dependencies: [
+    ],
+    targets: [
+        .target(name: "SwiftKORE",
+                    path: "Source",
+                    exclude: ["Info.plist"]),
+        .testTarget(
+            name: "SwiftKORETests",
+            dependencies: ["SwiftKORE"],
+            path: "Tests")
+    ],
+    swiftLanguageVersions: [.v5]
 )
