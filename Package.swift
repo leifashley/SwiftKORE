@@ -10,7 +10,14 @@ import PackageDescription
 
 let package = Package(name: "SwiftKORE",
                       platforms: [.iOS(.v14)],
-                      products: [.library(name: "SwiftKORE", target: ["SwiftKORE"])],
-                      targets: [.target(name: "SwiftKORE", path: "Source", exclude: ["Info.plist"])],
+                      products: [.library(name: "SwiftKORE",
+                                          target: ["SwiftKORE"])],
+                      targets: [.target(name: "SwiftKORE",
+                                        path: "Source",
+                                        exclude: ["Info.plist"]),
+                                .testTarget(name: "SwiftKORETests",
+                                            dependencies: ["SwiftKORE"],
+                                            path: "Tests"
+                                           )],
                       swiftLanguageVersions: [.v5]
 )

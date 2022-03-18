@@ -56,7 +56,7 @@
 			children = (
 				93906DD827E4F9C400D1EE32 /* Deployment */,
 				93906DC027E4F91700D1EE32 /* Source */,
-				93906DCA27E4F91700D1EE32 /* SwiftKORETests */,
+				93906DCA27E4F91700D1EE32 /* Tests */,
 				93906DBF27E4F91700D1EE32 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,12 +79,12 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		93906DCA27E4F91700D1EE32 /* SwiftKORETests */ = {
+		93906DCA27E4F91700D1EE32 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				93906DCB27E4F91700D1EE32 /* SwiftKORETests.swift */,
 			);
-			path = SwiftKORETests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		93906DD827E4F9C400D1EE32 /* Deployment */ = {
