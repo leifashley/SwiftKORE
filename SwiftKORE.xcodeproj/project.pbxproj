@@ -11,6 +11,14 @@
 		93906DCC27E4F91700D1EE32 /* SwiftKORETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906DCB27E4F91700D1EE32 /* SwiftKORETests.swift */; };
 		93906DCD27E4F91700D1EE32 /* SwiftKORE.h in Headers */ = {isa = PBXBuildFile; fileRef = 93906DC127E4F91700D1EE32 /* SwiftKORE.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93906DD727E4F92D00D1EE32 /* FirstFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906DD627E4F92D00D1EE32 /* FirstFile.swift */; };
+		93906E1827E560E900D1EE32 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906E1727E560E900D1EE32 /* StringExtensions.swift */; };
+		93906E1A27E5658100D1EE32 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906E1927E5658100D1EE32 /* Constants.swift */; };
+		93906E1C27E565F500D1EE32 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906E1B27E565F500D1EE32 /* BundleExtension.swift */; };
+		93906E1E27E5660E00D1EE32 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906E1D27E5660E00D1EE32 /* UIKitExtensions.swift */; };
+		93906E2027E5664E00D1EE32 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906E1F27E5664E00D1EE32 /* DateExtension.swift */; };
+		93906E2227E566C200D1EE32 /* UrlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906E2127E566C200D1EE32 /* UrlExtensions.swift */; };
+		93906E2527E5674200D1EE32 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 93906E2427E5674200D1EE32 /* SwiftyBeaver */; };
+		93906E2827E567AD00D1EE32 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906E2727E567AD00D1EE32 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +38,13 @@
 		93906DCB27E4F91700D1EE32 /* SwiftKORETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKORETests.swift; sourceTree = "<group>"; };
 		93906DD627E4F92D00D1EE32 /* FirstFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstFile.swift; sourceTree = "<group>"; };
 		93906E1027E5122700D1EE32 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
+		93906E1727E560E900D1EE32 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		93906E1927E5658100D1EE32 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		93906E1B27E565F500D1EE32 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		93906E1D27E5660E00D1EE32 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		93906E1F27E5664E00D1EE32 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		93906E2127E566C200D1EE32 /* UrlExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlExtensions.swift; sourceTree = "<group>"; };
+		93906E2727E567AD00D1EE32 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93906E2527E5674200D1EE32 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +91,9 @@
 			children = (
 				93906DC127E4F91700D1EE32 /* SwiftKORE.h */,
 				93906DD627E4F92D00D1EE32 /* FirstFile.swift */,
+				93906E2627E5678800D1EE32 /* Extensions */,
+				93906E1927E5658100D1EE32 /* Constants.swift */,
+				93906E2727E567AD00D1EE32 /* Logger.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -93,6 +112,18 @@
 				93906E1027E5122700D1EE32 /* Package.swift */,
 			);
 			path = Deployment;
+			sourceTree = "<group>";
+		};
+		93906E2627E5678800D1EE32 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				93906E1727E560E900D1EE32 /* StringExtensions.swift */,
+				93906E1B27E565F500D1EE32 /* BundleExtension.swift */,
+				93906E1D27E5660E00D1EE32 /* UIKitExtensions.swift */,
+				93906E1F27E5664E00D1EE32 /* DateExtension.swift */,
+				93906E2127E566C200D1EE32 /* UrlExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +154,9 @@
 			dependencies = (
 			);
 			name = SwiftKORE;
+			packageProductDependencies = (
+				93906E2427E5674200D1EE32 /* SwiftyBeaver */,
+			);
 			productName = SwiftKORE;
 			productReference = 93906DBE27E4F91700D1EE32 /* SwiftKORE.framework */;
 			productType = "com.apple.product-type.framework";
@@ -173,6 +207,9 @@
 				Base,
 			);
 			mainGroup = 93906DB427E4F91600D1EE32;
+			packageReferences = (
+				93906E2327E5674200D1EE32 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+			);
 			productRefGroup = 93906DBF27E4F91700D1EE32 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -206,6 +243,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				93906DD727E4F92D00D1EE32 /* FirstFile.swift in Sources */,
+				93906E2027E5664E00D1EE32 /* DateExtension.swift in Sources */,
+				93906E1827E560E900D1EE32 /* StringExtensions.swift in Sources */,
+				93906E1A27E5658100D1EE32 /* Constants.swift in Sources */,
+				93906E2227E566C200D1EE32 /* UrlExtensions.swift in Sources */,
+				93906E1C27E565F500D1EE32 /* BundleExtension.swift in Sources */,
+				93906E1E27E5660E00D1EE32 /* UIKitExtensions.swift in Sources */,
+				93906E2827E567AD00D1EE32 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +516,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93906E2327E5674200D1EE32 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93906E2427E5674200D1EE32 /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93906E2327E5674200D1EE32 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93906DB527E4F91700D1EE32 /* Project object */;
 }
