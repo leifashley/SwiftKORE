@@ -15,9 +15,11 @@ let package = Package(
         .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver.git", .branch("master"))
     ],
     targets: [
-        .target(name: "SwiftKORE",
-                    path: "Source",
-                    exclude: ["Info.plist"]),
+        .target(
+            name: "SwiftKORE",
+            dependencies: ["SwiftyBeaver"],
+            path: "Source",
+            exclude: ["Info.plist"]),
         .testTarget(
             name: "SwiftKORETests",
             dependencies: ["SwiftKORE"],
