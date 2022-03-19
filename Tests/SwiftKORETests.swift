@@ -19,7 +19,17 @@ class SwiftKORETests: XCTestCase {
     }
 
     func testExample() throws {
-        print("#: \("test.value".localized2())")
+        print("#: \("test.value".localized)")
+        
+        var color = UIColor(hexString: "#FF0000")
+        
+        var fRed : CGFloat = 0
+        var fGreen : CGFloat = 0
+        var fBlue : CGFloat = 0
+        var fAlpha: CGFloat = 0
+        color.getRed(&fRed, green: &fGreen, blue: &fBlue, alpha: &fAlpha)
+        
+        print("#: \(fRed), \(fBlue), \(fGreen) - \(fAlpha)")
     }
 
     func testPerformanceExample() throws {

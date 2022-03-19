@@ -20,16 +20,16 @@ extension String {
         }
     }
     
-    public func localized2() -> String {
-        return NSLocalizedString(self, comment: "localized")
-    }
-    
-    public func asURLRequest2() -> URLRequest? {
-        if let url = URL(string: self) {
-            return URLRequest(url: url)
-        } else {
-            return nil
-        }
-    }
+//    public func localized2() -> String {
+//        return NSLocalizedString(self, comment: "localized")
+//    }
+//    
+//    public func asURLRequest2() -> URLRequest? {
+//        if let url = URL(string: self) {
+//            return URLRequest(url: url)
+//        } else {
+//            return nil
+//        }
+//    }
 }
 
