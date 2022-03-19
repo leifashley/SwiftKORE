@@ -20,6 +20,8 @@
 		93906E2527E5674200D1EE32 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 93906E2427E5674200D1EE32 /* SwiftyBeaver */; };
 		93906E2827E567AD00D1EE32 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906E2727E567AD00D1EE32 /* Logger.swift */; };
 		939A4E9D27E62CAF008AF989 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 939A4E9F27E62CAF008AF989 /* Localizable.strings */; };
+		939A4EA727E66374008AF989 /* UIColorExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939A4EA627E66374008AF989 /* UIColorExtentions.swift */; };
+		939A4EA927E6783A008AF989 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939A4EA827E6783A008AF989 /* UIImageExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		93906E2127E566C200D1EE32 /* UrlExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlExtensions.swift; sourceTree = "<group>"; };
 		93906E2727E567AD00D1EE32 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		939A4E9E27E62CAF008AF989 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		939A4EA627E66374008AF989 /* UIColorExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtentions.swift; sourceTree = "<group>"; };
+		939A4EA827E6783A008AF989 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,11 +124,13 @@
 		93906E2627E5678800D1EE32 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				939A4EA627E66374008AF989 /* UIColorExtentions.swift */,
+				93906E1D27E5660E00D1EE32 /* UIKitExtensions.swift */,
 				93906E1727E560E900D1EE32 /* StringExtensions.swift */,
 				93906E1B27E565F500D1EE32 /* BundleExtension.swift */,
-				93906E1D27E5660E00D1EE32 /* UIKitExtensions.swift */,
 				93906E1F27E5664E00D1EE32 /* DateExtension.swift */,
 				93906E2127E566C200D1EE32 /* UrlExtensions.swift */,
+				939A4EA827E6783A008AF989 /* UIImageExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,9 +263,11 @@
 				93906DD727E4F92D00D1EE32 /* FirstFile.swift in Sources */,
 				93906E2027E5664E00D1EE32 /* DateExtension.swift in Sources */,
 				93906E1827E560E900D1EE32 /* StringExtensions.swift in Sources */,
+				939A4EA727E66374008AF989 /* UIColorExtentions.swift in Sources */,
 				93906E1A27E5658100D1EE32 /* Constants.swift in Sources */,
 				93906E2227E566C200D1EE32 /* UrlExtensions.swift in Sources */,
 				93906E1C27E565F500D1EE32 /* BundleExtension.swift in Sources */,
+				939A4EA927E6783A008AF989 /* UIImageExtensions.swift in Sources */,
 				93906E1E27E5660E00D1EE32 /* UIKitExtensions.swift in Sources */,
 				93906E2827E567AD00D1EE32 /* Logger.swift in Sources */,
 			);

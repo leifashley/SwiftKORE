@@ -19,17 +19,12 @@ class SwiftKORETests: XCTestCase {
     }
 
     func testExample() throws {
-        print("#: \("test.value".localized)")
+        var color = UIColor(hexString: "#FF000088")
         
-        var color = UIColor(hexString: "#FF0000")
+        XCTAssert(color.red == 1.0, "Value of red")
         
-        var fRed : CGFloat = 0
-        var fGreen : CGFloat = 0
-        var fBlue : CGFloat = 0
-        var fAlpha: CGFloat = 0
-        color.getRed(&fRed, green: &fGreen, blue: &fBlue, alpha: &fAlpha)
-        
-        print("#: \(fRed), \(fBlue), \(fGreen) - \(fAlpha)")
+        print("#HEX: \(color.hex)")
+        print("#HEX: \(color.hexWithAlpha)")
     }
 
     func testPerformanceExample() throws {

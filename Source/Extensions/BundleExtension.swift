@@ -54,3 +54,42 @@ extension Bundle {
         return t
     }
 }
+
+extension Bundle {
+    
+    
+    // returns the canonical appliocation name - this is the name default name of the app if CFBundleDisplayName is not set
+    var appName:  String? {
+        return Bundle.main.infoDictionary!["CFBundleName"] as! String?
+    }
+    
+    // returns the canonical application name - this is the name default name of the app if CFDisplayName is not specified
+    var displayName: String? {
+        return Bundle.main.infoDictionary!["CFBundleDisplayName"] as! String?
+    }
+    
+    // returns the application bundle name - e.g., com.myorg.thisAppBundleName
+    var bundleName: String? {
+        return Bundle.main.infoDictionary!["CFBundleIdentifier"] as! String?
+    }
+    
+    
+    // returns the build number - this is not your applications version number but the internal build number
+    // that should be incremented with every iTunesConnect submission
+    var buildNumber: String? {
+        return Bundle.main.infoDictionary!["CFBundleVersion"] as? String  // was: CFBuildNumber
+    }
+    
+    
+    // returns the version number - known as the marketing version number
+    var vesionNumber: String? {
+        return Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String?
+    }
+    
+    // returns the version number - known as the marketing version number
+    var buildDate: Date? {
+        return Bundle.main.infoDictionary!["CFBuildDate"] as! Date?
+    }
+    
+    
+}
