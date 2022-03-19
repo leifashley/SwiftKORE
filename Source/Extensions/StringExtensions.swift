@@ -8,11 +8,11 @@
 import Foundation
 
 extension String {
-    var localized: String {
+    public var localized: String {
         return NSLocalizedString(self, comment: "localized")
     }
     
-    var asURLRequest: URLRequest? {
+    public var asURLRequest: URLRequest? {
         if let url = URL(string: self) {
             return URLRequest(url: url)
         } else {
@@ -20,11 +20,11 @@ extension String {
         }
     }
     
-    func localized2() -> String {
+    public func localized2() -> String {
         return NSLocalizedString(self, comment: "localized")
     }
     
-    func asURLRequest2() -> URLRequest? {
+    public func asURLRequest2() -> URLRequest? {
         if let url = URL(string: self) {
             return URLRequest(url: url)
         } else {

@@ -19,6 +19,7 @@
 		93906E2227E566C200D1EE32 /* UrlExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906E2127E566C200D1EE32 /* UrlExtensions.swift */; };
 		93906E2527E5674200D1EE32 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 93906E2427E5674200D1EE32 /* SwiftyBeaver */; };
 		93906E2827E567AD00D1EE32 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93906E2727E567AD00D1EE32 /* Logger.swift */; };
+		939A4E9D27E62CAF008AF989 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 939A4E9F27E62CAF008AF989 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		93906E1F27E5664E00D1EE32 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		93906E2127E566C200D1EE32 /* UrlExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlExtensions.swift; sourceTree = "<group>"; };
 		93906E2727E567AD00D1EE32 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		939A4E9E27E62CAF008AF989 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		93906DCA27E4F91700D1EE32 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				939A4E9827E62C39008AF989 /* Resources */,
 				93906DCB27E4F91700D1EE32 /* SwiftKORETests.swift */,
 			);
 			path = Tests;
@@ -124,6 +127,14 @@
 				93906E2127E566C200D1EE32 /* UrlExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		939A4E9827E62C39008AF989 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				939A4E9F27E62CAF008AF989 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				939A4E9D27E62CAF008AF989 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +282,17 @@
 			targetProxy = 93906DC827E4F91700D1EE32 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		939A4E9F27E62CAF008AF989 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				939A4E9E27E62CAF008AF989 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		93906DCE27E4F91700D1EE32 /* Debug */ = {
@@ -326,9 +349,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -383,8 +408,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
