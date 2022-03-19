@@ -91,50 +91,14 @@ public extension Color {
 }
 
 public extension UIColor {
-    //    convenience init(hexColorCode code: UInt) {
-    //        let red   = CGFloat((code & 0xFF0000) >> 16)
-    //        let green = CGFloat((code & 0xFF00) >> 8)
-    //        let blue  = CGFloat(code & 0xFF)
-    //
-    //        self.init(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: 1.0)
-    //    }
-    //
-    //    convenience init(hexString: String) {
-    //        var code = hexString
-    //
-    //        if code.hasPrefix("#") {
-    //            code = String(code.dropFirst())
-    //        }
-    //
-    //        let color = UInt(code, radix: 16) ?? 0
-    //        self.init(hexColorCode: color)
-    //    }
-    
-    convenience init(hexColorCode code: UInt) {
-        let red   = CGFloat((code & 0xFF0000) >> 16)
-        let green = CGFloat((code & 0xFF00) >> 8)
-        let blue  = CGFloat(code & 0xFF)
-        
-        self.init(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: 1.0)
-    }
-    
-    //    convenience init(hexString: String) {
-    //        var code = hexString
-    //
-    //        if code.hasPrefix("#") {
-    //            code = String(code.dropFirst())
-    //        }
-    //
-    //        let color = UInt(code, radix: 16) ?? 0
-    //        self.init(hexColorCode: color)
-    //    }
-    
     convenience init(hexString: String) {
         var code = hexString
         
         if code.hasPrefix("#") {
             code = String(code.dropFirst())
         }
+        
+        //TODO: validate using: scanner.scanHexInt64(&hexNumber)
         
         if code.count == 6 || code.count == 8 {
             var values = [CGFloat]()
