@@ -95,9 +95,9 @@
 		93906DC027E4F91700D1EE32 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				93906E2627E5678800D1EE32 /* Extensions */,
 				93906DC127E4F91700D1EE32 /* SwiftKORE.h */,
 				93906DD627E4F92D00D1EE32 /* FirstFile.swift */,
-				93906E2627E5678800D1EE32 /* Extensions */,
 				93906E1927E5658100D1EE32 /* Constants.swift */,
 				93906E2727E567AD00D1EE32 /* Logger.swift */,
 			);

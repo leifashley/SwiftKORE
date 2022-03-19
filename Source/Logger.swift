@@ -10,37 +10,37 @@ import SwiftyBeaver
 
 /// For application wide logging, this adapter logging class will accept a base logging adapter and use it for logging.
 /// This keeps the app insulated against changes in the logging system.
-class AppLogger {
-    var separatorTitleMessage = " - "
-    var separatorError = ": "
+public class AppLogger {
+    public var separatorTitleMessage = " - "
+    public var separatorError = ": "
     
     let logger: LogAdapter
     
-    init(adapter: LogAdapter) {
+    public init(adapter: LogAdapter) {
         self.logger = adapter
     }
     
-    func verbose(title: String? = nil, _ message: String) {
+    public func verbose(title: String? = nil, _ message: String) {
         logger.info(buildLogMessage(title, message: message))
     }
     
-    func debug(title: String? = nil, _ message: String) {
+    public func debug(title: String? = nil, _ message: String) {
         logger.debug(buildLogMessage(title, message: message))
     }
     
-    func info(title: String? = nil, _ message: String) {
+    public func info(title: String? = nil, _ message: String) {
         logger.info(buildLogMessage(title, message: message))
     }
     
-    func warn(title: String? = nil, _ message: String) {
+    public func warn(title: String? = nil, _ message: String) {
         logger.warn(buildLogMessage(title, message: message))
     }
     
-    func error(title: String? = nil, _ message: String, error: Error) {
+    public func error(title: String? = nil, _ message: String, error: Error) {
         logger.error(buildErrorLogMessage(title, message: message, error: error))
     }
     
-    func toConsole(_ message: String) {
+    public func toConsole(_ message: String) {
         print(message)
     }
     
@@ -66,7 +66,7 @@ class AppLogger {
     }
 }
 
-protocol LogAdapter {
+public protocol LogAdapter {
     func verbose(_ message: String)
     func debug(_ message: String)
     func info(_ message: String)
@@ -74,27 +74,27 @@ protocol LogAdapter {
     func error(_ message: String)
 }
 
-class SwiftyBeaverLogAdapter: LogAdapter {
+public class SwiftyBeaverLogAdapter: LogAdapter {
     static let console = ConsoleDestination()
     var logger: SwiftyBeaver.Type
     
-    func verbose(_ message: String) {
+    public func verbose(_ message: String) {
         logger.info(message)
     }
     
-    func debug(_ message: String) {
+    public func debug(_ message: String) {
         logger.debug(message)
     }
     
-    func info(_ message: String) {
+    public func info(_ message: String) {
         logger.info(message)
     }
     
-    func warn(_ message: String) {
+    public func warn(_ message: String) {
         logger.warning(message)
     }
     
-    func error(_ message: String) {
+    public func error(_ message: String) {
         logger.error(message)
     }
     
@@ -117,6 +117,6 @@ class SwiftyBeaverLogAdapter: LogAdapter {
     }
 }
 
-func className<T: Any>(_ c: T.Type, function: String) -> String {
+public func className<T: Any>(_ c: T.Type, function: String) -> String {
     return "\(String(describing: c)).\(function)"
 }

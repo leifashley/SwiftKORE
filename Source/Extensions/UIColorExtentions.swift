@@ -90,33 +90,7 @@ public extension Color {
     static let tertiarySystemGroupedBackground: Color = Color(UIColor.tertiarySystemGroupedBackground)
 }
 
-extension UIColor {
-//    convenience init(hexColorCode code: UInt) {
-//        let red   = CGFloat((code & 0xFF0000) >> 16)
-//        let green = CGFloat((code & 0xFF00) >> 8)
-//        let blue  = CGFloat(code & 0xFF)
-//
-//        self.init(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: 1.0)
-//    }
-//
-//    convenience init(hexString: String) {
-//        var code = hexString
-//
-//        if code.hasPrefix("#") {
-//            code = String(code.dropFirst())
-//        }
-//
-//        let color = UInt(code, radix: 16) ?? 0
-//        self.init(hexColorCode: color)
-//    }
-    convenience init(hexColorCode code: UInt) {
-        let red   = CGFloat((code & 0xFF0000) >> 16)
-        let green = CGFloat((code & 0xFF00) >> 8)
-        let blue  = CGFloat(code & 0xFF)
-        
-        self.init(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: 1.0)
-    }
-    
+public extension UIColor {
     convenience init(hexString: String) {
         var code = hexString
         
@@ -124,8 +98,21 @@ extension UIColor {
             code = String(code.dropFirst())
         }
         
-        let color = UInt(code, radix: 16) ?? 0
-        self.init(hexColorCode: color)
+        //TODO: validate using: scanner.scanHexInt64(&hexNumber)
+        
+        if code.count == 6 || code.count == 8 {
+            var values = [CGFloat]()
+            
+            for i in stride(from: 0, to: hexString.count, by: 2) {
+                let s = hexString.substring(start: i, length: 2)
+                values.append(CGFloat(s.hexToUInt) / 255.0)                
+            }
+            
+            let alpha:CGFloat = values.count == 4 ? values[3] : 1.0
+            self.init(red: values[0], green: values[1], blue: values[2], alpha: alpha)
+        } else {
+            self.init()
+        }
     }
     
     
@@ -185,47 +172,47 @@ public extension Color {
     }
 }
 
-extension UIColor {
+public extension UIColor {
     func colorByAdjustingSaturation(factor : CGFloat) -> UIColor{
-            var h: CGFloat = 0
-            var s: CGFloat = 0
-            var b: CGFloat = 0
-            var alpha:CGFloat = 0
-            
-            // get the old HSB
-            self.getHue(&h, saturation: &s, brightness: &b, alpha: &alpha )
-            // apply the new S
-            let newColor = UIColor(hue: h, saturation: s * factor, brightness: b, alpha: alpha)
-            
-            return newColor
-        }
+        var h: CGFloat = 0
+        var s: CGFloat = 0
+        var b: CGFloat = 0
+        var alpha:CGFloat = 0
         
-        func colorByAdjustingBrightness(factor : CGFloat) -> UIColor{
-            var h: CGFloat = 0
-            var s: CGFloat = 0
-            var b: CGFloat = 0
-            var alpha:CGFloat = 0
-            
-            // get the old HSB
-            self.getHue(&h, saturation: &s, brightness: &b, alpha: &alpha )
-            // apply the new B
-            let newColor = UIColor(hue: h, saturation: s, brightness: b * factor, alpha: alpha)
-            
-            return newColor
-        }
+        // get the old HSB
+        self.getHue(&h, saturation: &s, brightness: &b, alpha: &alpha )
+        // apply the new S
+        let newColor = UIColor(hue: h, saturation: s * factor, brightness: b, alpha: alpha)
         
-        func colorByAdjustingHue(factor : CGFloat) -> UIColor{
-            var h: CGFloat = 0
-            var s: CGFloat = 0
-            var b: CGFloat = 0
-            var alpha:CGFloat = 0
-            
-            // get the old HSB
-            self.getHue(&h, saturation: &s, brightness: &b, alpha: &alpha )
-            // apply the new H
-            let newColor = UIColor(hue: h * factor, saturation: s, brightness: b , alpha: alpha)
-            
-            return newColor
-        }
+        return newColor
+    }
+    
+    func colorByAdjustingBrightness(factor : CGFloat) -> UIColor{
+        var h: CGFloat = 0
+        var s: CGFloat = 0
+        var b: CGFloat = 0
+        var alpha:CGFloat = 0
+        
+        // get the old HSB
+        self.getHue(&h, saturation: &s, brightness: &b, alpha: &alpha )
+        // apply the new B
+        let newColor = UIColor(hue: h, saturation: s, brightness: b * factor, alpha: alpha)
+        
+        return newColor
+    }
+    
+    func colorByAdjustingHue(factor : CGFloat) -> UIColor{
+        var h: CGFloat = 0
+        var s: CGFloat = 0
+        var b: CGFloat = 0
+        var alpha:CGFloat = 0
+        
+        // get the old HSB
+        self.getHue(&h, saturation: &s, brightness: &b, alpha: &alpha )
+        // apply the new H
+        let newColor = UIColor(hue: h * factor, saturation: s, brightness: b , alpha: alpha)
+        
+        return newColor
+    }
 }
 
